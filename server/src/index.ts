@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 // Routes
-// import { contactRouter } from "./routes/contact.route";
+import { contactRouter } from "./modules/contact/contact.route";
 
 // Connexion à la base de données
 import { connectDB } from "./db/conn";
@@ -22,7 +22,7 @@ app.get("/", (_req, res) => {
   res.send("Hello World!");
 });
 
-// app.use("/api", contactRouter);
+app.use("/api", contactRouter);
 
 // Ouverture du serveur
 const PORT = 5000;
