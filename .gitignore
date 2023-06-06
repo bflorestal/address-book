@@ -1,0 +1,5 @@
+%ProgramData%
+node_modules
+
+.idea
+.env
