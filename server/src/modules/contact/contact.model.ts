@@ -12,13 +12,13 @@ export interface IContact {
 }
 
 const contactSchema = new Schema<IContact>({
-  prenom: { type: String, required: false, minlength: 2, maxlength: 100 },
+  prenom: { type: String, required: false, maxlength: 100 },
   nom: { type: String, required: true, minlength: 2, maxlength: 100 },
-  email: { type: String, required: false, minlength: 5, maxlength: 100 },
+  email: { type: String, required: false, maxlength: 100 },
   telephone: { type: String, required: true, minlength: 10, maxlength: 20 },
   adresse: { type: String, required: false, maxlength: 200 },
-  entreprise: { type: String, required: false, minlength: 2, maxlength: 200 },
-  siteWeb: { type: String, required: false, minlength: 2, maxlength: 200 },
+  entreprise: { type: String, required: false, maxlength: 200 },
+  siteWeb: { type: String, required: false, maxlength: 200 },
   note: { type: String, required: false, maxlength: 1000 },
 });
 
